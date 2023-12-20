@@ -49,9 +49,11 @@ export const Navbar = () => {
                             </Link>
                         </li>
                     </ul>
-            </nav>
+                </nav>
             <Outlet />
         </React.Fragment>
     );
 };
+
+
 
