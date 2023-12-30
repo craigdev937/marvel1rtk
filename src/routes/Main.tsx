@@ -4,6 +4,7 @@ import { createBrowserRouter,
 import { NotFound } from "../components/NotFound";
 import { Navbar } from "./Navbar";
 import { Characters } from "../containers/Characters/Characters";
+import { CharDetail } from "../containers/Char/CharDetail";
 import { Comics } from "../containers/Comics/Comics";
 
 const Router = createBrowserRouter([
@@ -18,8 +19,8 @@ const Router = createBrowserRouter([
                 errorElement: <NotFound />
             },
             {
-                path: "/comics",
-                element: <Comics />,
+                path: "/char/:id",
+                element: <CharDetail />,
                 errorElement: <NotFound />
             }
         ]

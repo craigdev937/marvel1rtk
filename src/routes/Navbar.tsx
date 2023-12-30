@@ -41,7 +41,7 @@ export const Navbar = () => {
                         </li>
                         <li className="navbar__item">
                             <Link 
-                                to="/comics"
+                                to="/char/:id"
                                 className="navbar__link"
                                 onClick={closeMenu}
                             >

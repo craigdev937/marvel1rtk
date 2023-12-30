@@ -11,7 +11,7 @@ export const CharCard = ({char}: CHA) => {
     const navigate = useNavigate();
 
     const handleNav = () => {
-        navigate(`/detail/${char.id}`);
+        navigate(`/char/${char.id}`);
     };
 
     return (
@@ -20,7 +20,8 @@ export const CharCard = ({char}: CHA) => {
                 <img 
                     alt={char.name}
                     src={`${char.thumbnail.path
-                        }.${char.thumbnail.extension}`}  
+                        }.${char.thumbnail.extension}`}
+                    onClick={handleNav}
                 />
                 <div className="title">
                     <h3>{char.name}</h3>
