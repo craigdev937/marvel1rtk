@@ -12,7 +12,7 @@ export const MarvelAPI = createApi({
     endpoints: (builder) => ({
         char: builder.query<ICharacters, void>({
             query: () => ({
-                url: `/characters?ts=1&apikey=${
+                url: `/characters?&limit=50ts=1&apikey=${
                     apiKEY}&hash=${hashKEY}`,
                 method: "GET"
             }),

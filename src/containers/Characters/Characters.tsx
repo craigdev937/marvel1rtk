@@ -6,7 +6,7 @@ import { CharCard } from "../../components/char/CharCard";
 export const Characters = () => {
     const { error, isLoading, data } = 
     MarvelAPI.useCharQuery();
-    const CharData = data && data.data.results;
+    const CharData = data?.data.results;
 
     if (error) {
         if ("status" in error) {
@@ -25,16 +25,25 @@ export const Characters = () => {
             {isLoading ? (
                 <h1>Loading...</h1>
             ) : (
-                <aside className="char_container">
-                   {CharData?.map((char) => (
-                        <CharCard 
-                            key={char.id} char={char} 
-                        />
-                   ))}
-                </aside>
+                <React.Fragment>
+                    <aside className="characters__grid">
+                        {CharData?.map((char) => (
+                            <CharCard 
+                                key={char.id} char={char} 
+                            />
+                        ))}
+                    </aside>
+                </React.Fragment>
             )}
         </React.Fragment>
     );
 };
 
 
+{/* <footer>
+                        <h3>{data?.attributionText}</h3>
+                        <link rel="stylesheet" href={data?.attributionHTML} />
+                        <a href="http://marvel.com" target="_blank">
+                            <button>Marvel</button>
+                        </a>
+                    </footer> */}

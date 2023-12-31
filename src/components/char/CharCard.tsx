@@ -16,17 +16,23 @@ export const CharCard = ({char}: CHA) => {
 
     return (
         <React.Fragment>
-            <section>
+            <aside className="ccard__card">
+                <div className="ccard__title">
+                    <h3>{char.name}</h3>
+                </div>
                 <img 
+                    className="ccard__image"
                     alt={char.name}
                     src={`${char.thumbnail.path
                         }.${char.thumbnail.extension}`}
-                    onClick={handleNav}
                 />
-                <div className="title">
-                    <h3>{char.name}</h3>
-                </div>
-            </section>
+                <button 
+                    className="ccard__btn"
+                    onClick={handleNav}
+                >
+                    Featured Comics
+                </button>
+            </aside>
         </React.Fragment>
     );
 };
