@@ -22,6 +22,11 @@ const Router = createBrowserRouter([
                 path: "/char/:id",
                 element: <CharDetail />,
                 errorElement: <NotFound />
+            },
+            {
+                path: "/comics",
+                element: <Comics />,
+                errorElement: <NotFound />
             }
         ]
     }

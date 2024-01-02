@@ -123,6 +123,10 @@ export interface IComics {
                 resourceURI: string,
                 name: string                
             },
+            variants: [{
+                resourceURI: string,
+                name: string                
+            }],
             prices: [{
                 type: string,
                 price: number

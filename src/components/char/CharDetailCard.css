@@ -1,0 +1,30 @@
+.det__grid {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit, 
+        minmax(220px, 1fr)
+    );
+    grid-gap: 1rem;
+}
+
+.det__card {
+    display: flex;
+    flex-direction: column;
+    pad: 5px;
+}
+
+.det__title {
+    font-size: 28px;
+    text-align: center;
+}
+
+.det__desc {
+    font-size: 16px;
+}
+
+.det__img {
+    width: 400px;
+    height: 500px;
+}
+
+

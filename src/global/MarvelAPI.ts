@@ -26,6 +26,14 @@ export const MarvelAPI = createApi({
             }),
             providesTags: ["Comics"]
         }),
+        com: builder.query<IComics, void>({
+            query: () => ({
+                url: `/comics?&limit=50&ts=1&apikey=${
+                    apiKEY}&hash=${hashKEY}`,
+                method: "GET"
+            }),
+            providesTags: ["Comics"]
+        }),
     })
 });
 
